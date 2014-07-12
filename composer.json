@@ -1,0 +1,15 @@
+{
+    "name": "petertheone/lqfb-php-api",
+    "description": "LiquidFeedback PHP API",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Grassberger aka. PeterTheOne",
+            "email": "petertheone@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.4.3"
+    }
+}
