@@ -1,8 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
-// todo: autoload?
-require_once 'MainController.php';
+require_once 'config.php';
 
 $app = new \Slim\Slim(array(
     'debug' => false
@@ -18,7 +17,9 @@ $app->error(function(\Exception $exception) use ($app) {
     $app->response->setBody($exception->getMessage());
 });
 
-$controller = new \LqfbPhpApi\MainController();
+$lqfb = new \LiquidFeedback\LiquidFeedback($config->server->host,
+    $config->server->port, $config->server->dbname, $config->server->user,
+    $config->server->password);
 
 $app->get('/', function() use($app) {
     $app->response->headers->set('Content-Type', 'text/html');
@@ -26,21 +27,21 @@ $app->get('/', function() use($app) {
     $app->response->setBody('index');
 });
 
-$app->get('/info', function() use ($app, $controller) {
-    $result = $controller->getLiquidFeedbackVersion();
+$app->get('/info', function() use ($app, $lqfb) {
+    $result = $lqfb->getLiquidFeedbackVersion();
     $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
 });
 
-$app->get('/member_count', function() use ($app, $controller) {
-    $result = $controller->getMemberCount();
+$app->get('/member_count', function() use ($app, $lqfb) {
+    $result = $lqfb->getMemberCount();
     $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
 });
 
-$app->get('/member', function() use ($app, $controller) {
+$app->get('/member', function() use ($app, $lqfb) {
     // todo: parameters
     // todo: access level
 
-    $result = $controller->getMember();
+    $result = $lqfb->getMember();
     $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
 });
 

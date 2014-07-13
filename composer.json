@@ -1,15 +1,23 @@
 {
-    "name": "petertheone/lqfb-php-api",
-    "description": "LiquidFeedback PHP API",
+    "name": "petertheone/liquidfeedback-api",
+    "description": "LiquidFeedback API",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
             "name": "Peter Grassberger aka. PeterTheOne",
-            "email": "petertheone@gmail.com"
+            "email": "petertheone@gmail.com",
+            "homepage": "http://petergrassberger.com/"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:PeterTheOne/LiquidFeedback-PHP.git"
         }
     ],
     "require": {
-        "slim/slim": "2.4.3"
+        "slim/slim": "2.4.3",
+        "petertheone/liquidfeedback": "*"
     }
 }

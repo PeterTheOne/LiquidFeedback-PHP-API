@@ -4,8 +4,45 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33e71679181d524c723f5fd6751827c8",
+    "hash": "f40f9b54a7994e3a47a2c9aa39ea9ab6",
     "packages": [
+        {
+            "name": "petertheone/liquidfeedback",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PeterTheOne/LiquidFeedback-PHP.git",
+                "reference": "fb3da0c31bdbf9acbd9e8e877563d8665475fa7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PeterTheOne/LiquidFeedback-PHP/zipball/fb3da0c31bdbf9acbd9e8e877563d8665475fa7d",
+                "reference": "fb3da0c31bdbf9acbd9e8e877563d8665475fa7d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LiquidFeedback": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Grassberger aka. PeterTheOne",
+                    "email": "petertheone@gmail.com",
+                    "homepage": "http://petergrassberger.com/"
+                }
+            ],
+            "description": "LiquidFeedback Core Database access Library",
+            "support": {
+                "source": "https://github.com/PeterTheOne/LiquidFeedback-PHP/tree/master",
+                "issues": "https://github.com/PeterTheOne/LiquidFeedback-PHP/issues"
+            },
+            "time": "2014-07-13 15:17:34"
+        },
         {
             "name": "slim/slim",
             "version": "2.4.3",
