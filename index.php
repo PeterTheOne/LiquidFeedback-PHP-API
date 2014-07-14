@@ -43,6 +43,16 @@ $app->get('/member_count', function() use ($app, $lqfb) {
     $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
 });
 
+$app->get('/contingent', function() use ($app, $lqfb) {
+    $result = $lqfb->getContingent();
+    $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
+});
+
+$app->get('/contingent_left', function() use ($app, $lqfb) {
+    $result = $lqfb->getContingentLeft();
+    $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
+});
+
 $app->get('/member', function() use ($app, $lqfb) {
     $result = $lqfb->getMember(
         $app->request->params('id'),
