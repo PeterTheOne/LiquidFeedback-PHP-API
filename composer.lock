@@ -7,18 +7,65 @@
     "hash": "f40f9b54a7994e3a47a2c9aa39ea9ab6",
     "packages": [
         {
+            "name": "lichtner/fluentpdo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lichtner/fluentpdo.git",
+                "reference": "26d6a5b9dda8a94d14b2ac037caf10362f92b487"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lichtner/fluentpdo/zipball/26d6a5b9dda8a94d14b2ac037caf10362f92b487",
+                "reference": "26d6a5b9dda8a94d14b2ac037caf10362f92b487",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "FluentPDO/FluentPDO.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marek Lichtner",
+                    "homepage": "http://licht.sk/"
+                }
+            ],
+            "description": "FluentPDO is small PHP library for rapid query building. Killer feature is smart join builder which generates joins automatically.",
+            "homepage": "http://fluentpdo.com/",
+            "keywords": [
+                "database",
+                "dbal",
+                "pdo"
+            ],
+            "time": "2014-01-09 20:25:56"
+        },
+        {
             "name": "petertheone/liquidfeedback",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeterTheOne/LiquidFeedback-PHP.git",
-                "reference": "fb3da0c31bdbf9acbd9e8e877563d8665475fa7d"
+                "reference": "2e957fdecb9e23ffcbb88aad5c4b8cc9efca6fe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeterTheOne/LiquidFeedback-PHP/zipball/fb3da0c31bdbf9acbd9e8e877563d8665475fa7d",
-                "reference": "fb3da0c31bdbf9acbd9e8e877563d8665475fa7d",
+                "url": "https://api.github.com/repos/PeterTheOne/LiquidFeedback-PHP/zipball/2e957fdecb9e23ffcbb88aad5c4b8cc9efca6fe8",
+                "reference": "2e957fdecb9e23ffcbb88aad5c4b8cc9efca6fe8",
                 "shasum": ""
+            },
+            "require": {
+                "lichtner/fluentpdo": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "1.3.*",
+                "phpunit/phpunit": "4.1.*"
             },
             "type": "library",
             "autoload": {
@@ -41,7 +88,7 @@
                 "source": "https://github.com/PeterTheOne/LiquidFeedback-PHP/tree/master",
                 "issues": "https://github.com/PeterTheOne/LiquidFeedback-PHP/issues"
             },
-            "time": "2014-07-13 15:17:34"
+            "time": "2014-07-14 21:57:13"
         },
         {
             "name": "slim/slim",
