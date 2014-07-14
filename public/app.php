@@ -1,12 +1,5 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require_once 'config.php';
-
-$app = new \Slim\Slim(array(
-    'debug' => false
-));
-
 // todo: add xml etc. switch
 $app->response->headers->set('Content-Type', 'application/json');
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
@@ -29,7 +22,6 @@ $app->notFound(function () {
 
 $app->get('/', function() use($app) {
     $app->response->headers->set('Content-Type', 'text/html');
-
     $app->response->setBody('index');
 });
 
@@ -63,7 +55,3 @@ $app->get('/member', function() use ($app, $lqfb) {
     );
     $app->response->setBody(json_encode($result, JSON_PRETTY_PRINT));
 });
-
-// ...
-
-$app->run();
