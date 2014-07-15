@@ -8,7 +8,7 @@ $lqfb = new \LiquidFeedback\LiquidFeedback($config->server->host,
     $config->server->port, $config->server->dbname, $config->server->user,
     $config->server->password);
 // !!! don't change the access level if you don't know what you are doing. !!!
-$lqfb->setCurrentAccessLevel(\LiquidFeedback\LiquidFeedback::ACCESS_LEVEL_PSEUDONYM);
+$lqfb->setCurrentAccessLevel(\LiquidFeedback\LiquidFeedback::ACCESS_LEVEL_ANONYMOUS);
 
 // todo: only display errors if config says so.
 $app->error(function(\Exception $exception) use ($app) {
