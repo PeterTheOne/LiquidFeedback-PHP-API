@@ -52,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PeterTheOne/LiquidFeedback-PHP.git",
-                "reference": "abed274e1267f3c1bddd03c6e1c9545c85d3c641"
+                "reference": "0c6f7af1161dd3052fa77f64053baec83b259fa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PeterTheOne/LiquidFeedback-PHP/zipball/abed274e1267f3c1bddd03c6e1c9545c85d3c641",
-                "reference": "abed274e1267f3c1bddd03c6e1c9545c85d3c641",
+                "url": "https://api.github.com/repos/PeterTheOne/LiquidFeedback-PHP/zipball/0c6f7af1161dd3052fa77f64053baec83b259fa8",
+                "reference": "0c6f7af1161dd3052fa77f64053baec83b259fa8",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "source": "https://github.com/PeterTheOne/LiquidFeedback-PHP/tree/master",
                 "issues": "https://github.com/PeterTheOne/LiquidFeedback-PHP/issues"
             },
-            "time": "2014-07-14 22:36:37"
+            "time": "2014-07-16 01:59:11"
         },
         {
             "name": "slim/slim",
@@ -906,12 +906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "4168f7b8e211cdc2d778ab78f35666580a6d7437"
+                "reference": "07ff901ce8b081cf227091b4919d347fa999b2a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/4168f7b8e211cdc2d778ab78f35666580a6d7437",
-                "reference": "4168f7b8e211cdc2d778ab78f35666580a6d7437",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/07ff901ce8b081cf227091b4919d347fa999b2a0",
+                "reference": "07ff901ce8b081cf227091b4919d347fa999b2a0",
                 "shasum": ""
             },
             "require": {
@@ -946,7 +946,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-08 12:21:41"
+            "time": "2014-07-09 09:06:26"
         }
     ],
     "aliases": [

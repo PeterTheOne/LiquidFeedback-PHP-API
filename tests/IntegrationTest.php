@@ -12,6 +12,16 @@ class IntegrationTest extends Slim_Framework_TestCase {
     }
 
     /**
+     * Application authentication and session management
+     */
+
+    public function testPostSession() {
+        $this->post('/session');
+        $this->assertEquals('200', $this->response->status());
+        //$this->assertEquals(/* */, $this->response->body());
+    }
+
+    /**
      * System information
      */
 

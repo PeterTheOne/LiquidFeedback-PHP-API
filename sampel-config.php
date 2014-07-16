@@ -12,3 +12,9 @@ $config->server->port = '';
 $config->server->dbname = '';
 $config->server->user = '';
 $config->server->password = '';
+
+$config->checkDelegationsIntervalHard = '1 day';
+$config->checkDelegationsIntervalSoft = '3 seconds';
+
+// !!! don't change the access level if you don't know what you are doing. !!!
+$config->defaultAccessLevel = \LiquidFeedback\AccessLevel::ANONYMOUS;

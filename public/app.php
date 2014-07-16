@@ -7,8 +7,20 @@ $app->response->headers->set('Access-Control-Allow-Origin', '*');
 $lqfb = new \LiquidFeedback\LiquidFeedback($config->server->host,
     $config->server->port, $config->server->dbname, $config->server->user,
     $config->server->password);
-// !!! don't change the access level if you don't know what you are doing. !!!
-$lqfb->setCurrentAccessLevel(\LiquidFeedback\LiquidFeedback::ACCESS_LEVEL_ANONYMOUS);
+$lqfb->setCurrentAccessLevel($config->defaultAccessLevel);
+
+
+$app->hook('slim.before.router', function() use ($app, $lqfb) {
+    if ($app->request->params('session_key')) {
+        if (!isset($_SESSION[$app->request->params('session_key')])) {
+            throw new Exception('Invalid session key');
+        }
+        $lqfb->setCurrentAccessLevel(
+            \LiquidFeedback\AccessLevel::MEMBER,
+            $_SESSION[$app->request->params('session_key')]
+        );
+    }
+});
 
 // todo: only display errors if config says so.
 $app->error(function(\Exception $exception) use ($app) {
@@ -23,6 +35,13 @@ $app->notFound(function () {
 $app->get('/', function() use($app) {
     $app->response->headers->set('Content-Type', 'text/html');
     $app->response->setBody('index');
+});
+
+$app->post('/session', function() use ($app, $lqfb) {
+    $memberApplication = $lqfb->startSession($app->request->params('key'));
+    $_SESSION[$memberApplication->session_key] = $memberApplication->id;
+    unset($memberApplication->id);
+    $app->response->setBody(json_encode($memberApplication, JSON_PRETTY_PRINT));
 });
 
 $app->get('/info', function() use ($app, $lqfb) {
